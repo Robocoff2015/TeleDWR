@@ -121,6 +121,14 @@ class _SettingPageState extends State<SettingPage> {
                                   "https://tele-nakhonsri.dwr.go.th/home/Index_HOME");
                             },
                           ),
+                          BoxAbout(
+                            title: "ลุ่มน้ำภาคใต้ฝั่งตะวันตก",
+                            icon: Icons.web_asset,
+                            path: () {
+                              launch(
+                                  "https://tele-southwest.dwr.go.th/home/Index_HOME");
+                            },
+                          ),
                         ],
                       ),
                     ),

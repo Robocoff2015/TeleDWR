@@ -24,6 +24,8 @@ class ImgRiver {
       "https://tele-songkramhuailuang.dwr.go.th/image/BasinImg/river_6.png";
   static String imgBasin7 =
       "https://tele-songkramhuailuang.dwr.go.th/image/BasinImg/river_7.png";
+  static String imgBasin8 =
+      "https://tele-songkramhuailuang.dwr.go.th/image/BasinImg/river_8.png";
 }
 
 class ListRiver {
@@ -62,6 +64,11 @@ class ListRiver {
       'title': "นครศรีธรรมราช",
       'page': 7,
       'latlng': LatLng(8.5530059, 99.8354578)
+    },
+    <String, dynamic>{
+      'title': "ภาคใต้ฝั่งตะวันตก",
+      'page': 8,
+      'latlng': LatLng(8.372965, 99.25653998)
     },
   ];
 }

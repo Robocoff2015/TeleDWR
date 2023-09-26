@@ -45,7 +45,9 @@ Future<List<StationModel>> getStationListTab(var basinId, var tab) async {
                             ? "https://tele-bangsaphan.dwr.go.th/webservice/webservice_bsp_Json"
                             : basinId == 7
                                 ? "http://tele-nakhonsri.dwr.go.th/webservice/webservice_nst_json"
-                                : "http://tele-maeklong.dwr.go.th/webservice/webservice_mk_json";
+                                : basinId == 8
+                                    ? "https://tele-southwest.dwr.go.th/webservice/webservice_sw_Json"
+                                    : "http://tele-maeklong.dwr.go.th/webservice/webservice_mk_json";
     final response = await http.get(
       Uri.parse(url),
     );
@@ -112,6 +114,13 @@ Future<StationModel> getStation(String stn_id, int basinId) async {
         {
           url =
               "https://tele-nakhonsri.dwr.go.th/webservice/webservice_nst_json_id?stn_id=" +
+                  stn_id;
+        }
+        break;
+      case 8:
+        {
+          url =
+              "https://tele-southwest.dwr.go.th/webservice/webservice_sw_Json_id?stn_id=" +
                   stn_id;
         }
         break;

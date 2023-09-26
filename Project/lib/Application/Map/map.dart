@@ -70,7 +70,7 @@ class _MapPageState extends State<MapPage> with TickerProviderStateMixin {
   }
 
   Future<void> get_data() async {
-    for (var i = 1; i < 8; i++) {
+    for (var i = 1; i < 9; i++) {
       List<StationModel> snapshots = await get_dataMap(i);
       if (snapshots != null) {
         basinList.add(

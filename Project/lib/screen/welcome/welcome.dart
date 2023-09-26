@@ -70,7 +70,7 @@ class _WelcomeState extends State<Welcome> {
       }
     }
 
-    for (var i = 1; i < 8; i++) {
+    for (var i = 1; i < 9; i++) {
       List<StationModel> data = await getStationListTab(i, "1");
       checkCallApi = i;
       if (data != null) {

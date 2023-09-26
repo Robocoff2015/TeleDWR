@@ -79,6 +79,8 @@ class _MenuPageState extends State<MenuPage> with TickerProviderStateMixin {
         return ImgRiver.imgBasin6;
       case 7:
         return ImgRiver.imgBasin7;
+      case 8:
+        return ImgRiver.imgBasin8;
     }
   }
 
@@ -136,6 +138,14 @@ class _MenuPageState extends State<MenuPage> with TickerProviderStateMixin {
         {
           Project_URL = infoBasin[6].projectUrl;
           Forecast_URL = infoBasin[6].forecastUrl;
+
+          setState(() {});
+          break;
+        }
+      case 8:
+        {
+          Project_URL = infoBasin[7].projectUrl;
+          Forecast_URL = infoBasin[7].forecastUrl;
 
           setState(() {});
           break;
@@ -729,7 +739,10 @@ class _MenuPageState extends State<MenuPage> with TickerProviderStateMixin {
                                                               ? "อำเภอบางสะพาน"
                                                               : SelectRiver == 7
                                                                   ? "จังหวัดนครศรีธรรมราช"
-                                                                  : "ไม่พบข้อมูล",
+                                                                  : SelectRiver ==
+                                                                          8
+                                                                      ? "ลุ่มน้ำภาคใต้ฝั่งตะวันตก"
+                                                                      : "ไม่พบข้อมูล",
                                       style: DefaultStyleB(),
                                     ),
                                   ),
@@ -820,7 +833,9 @@ class _MenuPageState extends State<MenuPage> with TickerProviderStateMixin {
                                                   ? ImgRiver.imgBasin5
                                                   : i == 6
                                                       ? ImgRiver.imgBasin6
-                                                      : ImgRiver.imgBasin7,
+                                                      : i == 7
+                                                          ? ImgRiver.imgBasin7
+                                                          : ImgRiver.imgBasin8,
                             ),
                             // image: AssetImage("assets/images/river.png"),
                             fit: BoxFit.cover,
@@ -876,16 +891,18 @@ class _MenuPageState extends State<MenuPage> with TickerProviderStateMixin {
                             ),
                             Expanded(
                               child: Container(
-                                decoration:optionSelected == i + 1 ?  BoxDecoration(): BoxDecoration(
-                                  gradient: LinearGradient(
-                                    begin: Alignment.topCenter,
-                                    end: Alignment.bottomCenter,
-                                    colors: [
-                                      Colors.transparent,
-                                      Colors.black,
-                                    ],
-                                  ),
-                                ),
+                                decoration: optionSelected == i + 1
+                                    ? BoxDecoration()
+                                    : BoxDecoration(
+                                        gradient: LinearGradient(
+                                          begin: Alignment.topCenter,
+                                          end: Alignment.bottomCenter,
+                                          colors: [
+                                            Colors.transparent,
+                                            Colors.black,
+                                          ],
+                                        ),
+                                      ),
                                 child: Align(
                                   alignment: Alignment.bottomRight,
                                   child: Padding(

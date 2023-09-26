@@ -45,6 +45,11 @@ Future<List<StationModel>> get_dataMap(int basinId) async {
         url = "https://tele-nakhonsri.dwr.go.th/webservice/webservice_nst_json";
       }
       break;
+    case 8:
+      {
+        url = "https://tele-southwest.dwr.go.th/webservice/webservice_sw_Json";
+      }
+      break;
   }
   // ส่ง Basin พร้อมกับข้อมูล
   // "https://tele-nakhonsri.dwr.go.th/webservice/webservice_nst_json";
